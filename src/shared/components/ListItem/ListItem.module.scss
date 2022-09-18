@@ -1,0 +1,87 @@
+@import '../../styles/mixins.scss';
+
+.itemContainer {
+  width: 800px;
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint(1400px, max) {
+    width: 500px;
+    height: 350px;
+  }
+
+  @include breakpoint(1200px, max) {
+    width: 350px;
+    height: 200px;
+  }
+
+  @include breakpoint(768px, max) {
+    width: 200px;
+    height: 150px;
+  }
+  .infoContainer {
+    height: 30%;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgb(27, 27, 27, 0.5);
+    color: white;
+    transition: 0.5s;
+    border-radius: 5px;
+    @include breakpoint(1400px, max) {
+      height: 55%;
+    }
+    .label {
+      margin: 10px;
+      font-size: 30px;
+      color: #f80;
+      @include breakpoint(1200px, max) {
+        font-size: 18px;
+      }
+      @include breakpoint(768px, max) {
+        margin: 5px;
+        font-size: 12px;
+      }
+    }
+    .title {
+      margin: 10px;
+      font-size: 40px;
+      @include breakpoint(1200px, max) {
+        font-size: 20px;
+      }
+      @include breakpoint(768px, max) {
+        margin: 5px;
+        font-size: 15px;
+      }
+    }
+    .description {
+      margin: 20px;
+      font-size: 20px;
+      opacity: 0;
+      transition: all 0.2s;
+      @include breakpoint(1200px, max) {
+        font-size: 10px;
+      }
+      @include breakpoint(768px, max) {
+        font-size: 8px;
+        margin: 10px;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .infoContainer {
+      height: 100%;
+      background: black;
+      .description {
+        opacity: 1;
+      }
+    }
+  }
+}

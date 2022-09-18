@@ -1,0 +1,64 @@
+@import '../../styles/mixins.scss';
+
+.headerContainer {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+  }
+  .textWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    text-align: center;
+    .label {
+      font-weight: bold;
+      font-size: 50px;
+      text-transform: uppercase;
+      color: #f80;
+      margin-bottom: 30px;
+      @include breakpoint(1200px, max) {
+        font-size: 30px;
+      }
+      @include breakpoint(768px, max) {
+        font-size: 20px;
+      }
+    }
+    .title {
+      font-weight: bold;
+      font-size: 80px;
+      color: #fff;
+      margin-bottom: 50px;
+      @include breakpoint(1200px, max) {
+        font-size: 50px;
+      }
+      @include breakpoint(768px, max) {
+        font-size: 30px;
+      }
+    }
+    .description {
+      font-size: 30px;
+      color: #f80;
+      @include breakpoint(1200px, max) {
+        font-size: 20px;
+      }
+      @include breakpoint(768px, max) {
+        font-size: 15px;
+      }
+    }
+  }
+}
