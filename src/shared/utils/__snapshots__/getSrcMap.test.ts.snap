@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getSrcMap should return srcMap 1`] = `
+Array [
+  Object {
+    "breakPoint": "768",
+    "src": "https://www.rtlboulevard.nl/sites/default/files/styles/inline_small/public/content/images/2018/06/19/ANP-56919532.jpg?itok=uYTfDZPr",
+  },
+  Object {
+    "breakPoint": "1200",
+    "src": "https://www.rtlboulevard.nl/sites/default/files/styles/artikel_top/public/content/images/2018/06/19/ANP-56919532.jpg?itok=SikI_AJI",
+  },
+  Object {
+    "breakPoint": "1400",
+    "src": "https://www.rtlboulevard.nl/sites/default/files/styles/liggend/public/content/images/2018/06/19/ANP-56919532.jpg?itok=TBK54eRq",
+  },
+]
+`;
+
+exports[`getSrcMap should skip 1200 breakpoint when missing path 1`] = `
+Array [
+  Object {
+    "breakPoint": "768",
+    "src": "https://www.rtlboulevard.nl/sites/default/files/styles/inline_small/public/content/images/2018/06/19/ANP-56919532.jpg?itok=uYTfDZPr",
+  },
+  Object {
+    "breakPoint": "1400",
+    "src": "https://www.rtlboulevard.nl/sites/default/files/styles/liggend/public/content/images/2018/06/19/ANP-56919532.jpg?itok=TBK54eRq",
+  },
+]
+`;
